@@ -1,0 +1,497 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Facturons — Facturation électronique conforme pour les artisans français"
+  canonical="/"
+>
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="bg-gradient-to-br from-bleu-light via-white to-white pt-16 pb-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-vert/10 text-vert font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
+        <span class="w-2 h-2 bg-vert rounded-full animate-pulse"></span>
+        Conforme réforme septembre 2026
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-noir leading-tight mb-6">
+        Facturez en conformité<br class="hidden sm:block" />
+        avec la loi<span class="text-bleu"> dès aujourd'hui.</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-gris-fonce max-w-2xl mx-auto mb-10 leading-relaxed">
+        La seule app mobile qui génère des factures <strong>Factur-X</strong> valides
+        et les transmet automatiquement via <strong>IOPOLE</strong> — en 2 minutes.
+      </p>
+
+      <!-- CTAs principaux -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a
+          href="#tarifs"
+          class="inline-flex items-center justify-center gap-2 bg-bleu text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-bleu-dark transition-colors shadow-lg shadow-bleu/25"
+        >
+          Commencer gratuitement
+        </a>
+        <a
+          href="#tarifs"
+          class="inline-flex items-center justify-center gap-2 bg-white text-noir border-2 border-gris px-8 py-4 rounded-2xl text-lg font-bold hover:border-bleu hover:text-bleu transition-colors"
+        >
+          Voir les forfaits →
+        </a>
+      </div>
+
+      <!-- Plateformes incluses dans l'abonnement -->
+      <div class="inline-flex flex-col items-center gap-3">
+        <p class="text-xs font-semibold text-gris-moyen uppercase tracking-wide">
+          Applications incluses dans votre forfait
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span class="inline-flex items-center gap-2 bg-white border border-gris rounded-xl px-4 py-2 text-sm font-semibold text-noir shadow-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M3.18 23.76c.3.17.64.2.96.1l11.5-11.5-2.28-2.28L3.18 23.76zM20.48 10.3l-2.58-1.49-2.57 2.57 2.57 2.57 2.6-1.5c.74-.43.74-1.72-.02-2.15zM2.04 1.13C1.76 1.43 1.6 1.9 1.6 2.5v19c0 .6.16 1.07.44 1.37l.07.07 10.64-10.63v-.24L2.11 1.06l-.07.07zM14.45 8.65L3.18.24c-.32-.1-.66-.07-.96.1l10.18 10.17 2.05-1.86z"/></svg>
+            Android
+            <span class="bg-vert/10 text-vert text-xs font-bold px-2 py-0.5 rounded-full">Disponible</span>
+          </span>
+          <span class="inline-flex items-center gap-2 bg-white border border-gris rounded-xl px-4 py-2 text-sm font-semibold text-noir shadow-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+            Windows
+            <span class="bg-vert/10 text-vert text-xs font-bold px-2 py-0.5 rounded-full">Disponible</span>
+          </span>
+          <span class="inline-flex items-center gap-2 bg-gris-clair border border-gris rounded-xl px-4 py-2 text-sm font-medium text-gris-moyen">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.42c1.39.07 2.35.74 3.17.78 1.2-.24 2.35-.93 3.64-.84 1.54.12 2.7.7 3.44 1.8-3.14 1.87-2.39 6.01.43 7.16-.57 1.39-1.3 2.77-2.68 3.96zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            iOS
+            <span class="bg-gris text-gris-moyen text-xs font-bold px-2 py-0.5 rounded-full">Q4 2026</span>
+          </span>
+          <span class="inline-flex items-center gap-2 bg-gris-clair border border-gris rounded-xl px-4 py-2 text-sm font-medium text-gris-moyen">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            macOS
+            <span class="bg-gris text-gris-moyen text-xs font-bold px-2 py-0.5 rounded-full">Q4 2026</span>
+          </span>
+        </div>
+        <p class="text-xs text-gris-moyen">Sans carte bancaire · Résiliable à tout moment</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LOGOS DE CONFIANCE
+  ═══════════════════════════════════════════ -->
+  <section class="bg-gris-clair py-8 px-4 border-y border-gris">
+    <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-8 text-gris-moyen text-sm font-medium">
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-vert rounded-full"></span>
+        Factur-X EN 16931
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-bleu rounded-full"></span>
+        PDP IOPOLE agréée DGFiP
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-noir rounded-full"></span>
+        PDF/A-3b certifié
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-vert rounded-full"></span>
+        FEC DGFiP intégré
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-bleu rounded-full"></span>
+        Chiffrement Stripe
+      </span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COMMENT ÇA MARCHE
+  ═══════════════════════════════════════════ -->
+  <section class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-noir mb-4">
+          Une facture conforme en 3 étapes
+        </h2>
+        <p class="text-gris-fonce text-lg max-w-xl mx-auto">
+          Zéro formation requise. Zéro logiciel complexe. Votre téléphone suffit.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            num: '1',
+            icon: '📝',
+            titre: 'Créez votre facture',
+            desc: 'Sélectionnez votre client, vos articles du catalogue, la TVA applicable. Tout est mémorisé pour la prochaine fois.',
+            color: 'bg-bleu-light text-bleu',
+          },
+          {
+            num: '2',
+            icon: '⚡',
+            titre: 'Facturons génère le PDF/A-3b',
+            desc: 'XML Factur-X EN 16931 embarqué dans un PDF certifié. Validation automatique. Aucune action requise.',
+            color: 'bg-vert/10 text-vert',
+          },
+          {
+            num: '3',
+            icon: '🏛️',
+            titre: 'IOPOLE transmet à la DGFiP',
+            desc: 'Votre facture est déposée sur la plateforme agréée en quelques secondes. Vous suivez le statut en temps réel.',
+            color: 'bg-bleu-light text-bleu',
+          },
+        ].map((step) => (
+          <div class="relative bg-white border border-gris rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow">
+            <div class={`inline-flex items-center justify-center w-12 h-12 rounded-xl text-2xl mb-5 ${step.color}`}>
+              {step.icon}
+            </div>
+            <div class="absolute top-5 right-5 text-5xl font-extrabold text-gris/60">
+              {step.num}
+            </div>
+            <h3 class="text-lg font-bold text-noir mb-2">{step.titre}</h3>
+            <p class="text-gris-fonce text-sm leading-relaxed">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href={`${base}/comment-ca-marche`} class="text-bleu font-semibold hover:underline">
+          Voir le guide complet pas à pas →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       POUR QUI
+  ═══════════════════════════════════════════ -->
+  <section class="bg-gris-clair py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-noir mb-4">
+          Fait pour les pros du terrain
+        </h2>
+        <p class="text-gris-fonce text-lg">
+          Artisans, freelances, auto-entrepreneurs — tous concernés par la réforme 2026.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {[
+          { emoji: '🏗️', label: 'Artisans du bâtiment' },
+          { emoji: '🔧', label: 'Plombiers / Chauffagistes' },
+          { emoji: '⚡', label: 'Électriciens' },
+          { emoji: '🎨', label: 'Peintres / Décorateurs' },
+          { emoji: '💼', label: 'Consultants / Freelances' },
+          { emoji: '💻', label: 'Développeurs / Designers' },
+          { emoji: '📊', label: 'Comptables / Juristes' },
+          { emoji: '🚗', label: 'Auto-entrepreneurs' },
+          { emoji: '🔨', label: 'Menuisiers / Charpentiers' },
+        ].map((item) => (
+          <div class="flex items-center gap-3 bg-white border border-gris rounded-xl px-4 py-3 text-sm font-medium text-gris-fonce hover:border-bleu hover:text-bleu transition-colors">
+            <span class="text-xl">{item.emoji}</span>
+            {item.label}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       POUR LES DÉVELOPPEURS
+  ═══════════════════════════════════════════ -->
+  <section class="py-16 px-4 border-t border-gris">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-noir rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-8">
+        <div class="flex-1">
+          <div class="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
+            Code source
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3">
+            Vous êtes développeur ?
+          </h2>
+          <p class="text-white/70 text-sm leading-relaxed mb-2">
+            Le code source Flutter complet est disponible à l'achat — white-label ready, conforme Factur-X, intégration IOPOLE incluse.
+            Évitez 12 mois de développement.
+          </p>
+          <p class="text-white/50 text-xs">Dev €149 · Business €499 · Enterprise €1 499</p>
+        </div>
+        <div class="flex-shrink-0">
+          <a
+            href="https://devisfabrice.gumroad.com/l/gdogxd"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-white text-noir font-bold px-6 py-3 rounded-xl hover:bg-gris-clair transition-colors"
+          >
+            Voir le code source →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       IOPOLE
+  ═══════════════════════════════════════════ -->
+  <section class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-gradient-to-br from-bleu to-bleu-dark rounded-3xl p-10 text-white">
+        <div class="max-w-3xl">
+          <div class="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-wide">
+            PDP agréée DGFiP
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mb-5 leading-tight">
+            Conformité IOPOLE incluse<br />dès le plan Starter
+          </h2>
+          <p class="text-white/80 text-lg mb-8 leading-relaxed">
+            IOPOLE est la Plateforme de Dématérialisation Partenaire officiellement agréée par la DGFiP.
+            Facturons s'y connecte nativement — sans configuration technique.
+          </p>
+
+          <ul class="space-y-3 mb-10">
+            {[
+              'Connexion en 2 clics depuis l\'app (client_id + client_secret)',
+              'Transmission PDF/A-3b + Factur-X EN 16931 automatique',
+              'Suivi des statuts en temps réel (Déposée → Validée → Reçue → Payée)',
+              'Mode Sandbox pour tester sans risque avant la production',
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-white/90">
+                <span class="mt-0.5 flex-shrink-0 w-5 h-5 bg-vert rounded-full flex items-center justify-center text-white text-xs font-bold">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={`${base}/iopole`}
+            class="inline-flex items-center gap-2 bg-white text-bleu font-bold px-6 py-3 rounded-xl hover:bg-bleu-light transition-colors"
+          >
+            Voir le tutoriel IOPOLE →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TARIFS
+  ═══════════════════════════════════════════ -->
+  <section id="tarifs" class="bg-gris-clair py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-noir mb-4">
+          Simple, transparent, sans surprise
+        </h2>
+        <p class="text-gris-fonce text-lg">Résiliable à tout moment. Prix HT.</p>
+        <div class="inline-flex items-center gap-2 mt-4 bg-vert/10 text-vert font-semibold text-sm px-5 py-2 rounded-full">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Android + Windows inclus dans tous les forfaits payants
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          {
+            name: 'Gratuit',
+            price: '0 €',
+            period: 'pour toujours',
+            desc: 'Pour découvrir et démarrer',
+            highlight: false,
+            badge: null,
+            cta: 'Démarrer gratuitement',
+            features: [
+              '3 factures / mois',
+              '5 clients',
+              'PDF standard',
+              'Devis',
+              'Export CSV basique',
+            ],
+            missing: ['Factur-X', 'IOPOLE', 'Catalogue', 'Statistiques', 'Comptabilité'],
+          },
+          {
+            name: 'Starter',
+            price: '9 €',
+            period: '/ mois',
+            desc: 'Pour les indépendants actifs',
+            highlight: true,
+            badge: 'Prix de lancement',
+            cta: 'Essai 30 jours gratuit',
+            features: [
+              'App Android + Windows incluses',
+              '50 factures / mois',
+              'Clients illimités',
+              'Factur-X ✓',
+              'IOPOLE ✓',
+              'Catalogue articles',
+              'Statistiques CA',
+              'Devis + signature',
+            ],
+            missing: ['Comptabilité FEC', 'Export TVA'],
+          },
+          {
+            name: 'Pro',
+            price: '19 €',
+            period: '/ mois',
+            desc: 'Pour les pros exigeants',
+            highlight: false,
+            badge: 'Prix de lancement',
+            cta: 'Essai 30 jours gratuit',
+            features: [
+              'App Android + Windows incluses',
+              'Factures illimitées',
+              'Clients illimités',
+              'Factur-X ✓',
+              'IOPOLE ✓',
+              'Catalogue articles',
+              'Statistiques avancées',
+              'FEC DGFiP + TVA',
+              'Avoirs (notes de crédit)',
+              'Relances automatiques',
+              'Dépenses & charges',
+            ],
+            missing: [],
+          },
+        ].map((plan) => (
+          <div
+            class={`relative rounded-2xl border-2 p-8 flex flex-col ${
+              plan.highlight
+                ? 'border-bleu bg-white shadow-xl shadow-bleu/10 scale-105'
+                : 'border-gris bg-white'
+            }`}
+          >
+            {plan.highlight && (
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-bleu text-white text-xs font-bold px-4 py-1 rounded-full">
+                Le plus populaire
+              </div>
+            )}
+            {plan.badge && (
+              <div class="inline-block bg-vert/10 text-vert text-xs font-bold px-3 py-1 rounded-full mb-3 self-start">
+                {plan.badge}
+              </div>
+            )}
+            <div class="mb-6">
+              <h3 class="text-xl font-extrabold text-noir mb-1">{plan.name}</h3>
+              <div class="flex items-baseline gap-1 mb-1">
+                <span class="text-4xl font-extrabold text-bleu">{plan.price}</span>
+                <span class="text-gris-moyen text-sm">{plan.period}</span>
+              </div>
+              <p class="text-sm text-gris-fonce">{plan.desc}</p>
+            </div>
+
+            <ul class="space-y-2 mb-6 flex-1">
+              {plan.features.map((f) => (
+                <li class="flex items-center gap-2 text-sm text-noir">
+                  <span class="text-vert font-bold">✓</span>
+                  {f}
+                </li>
+              ))}
+              {plan.missing.map((f) => (
+                <li class="flex items-center gap-2 text-sm text-gris-moyen line-through">
+                  <span>✗</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={`${base}/tarifs`}
+              class={`block text-center py-3 rounded-xl font-bold transition-colors ${
+                plan.highlight
+                  ? 'bg-bleu text-white hover:bg-bleu-dark'
+                  : 'bg-gris-clair text-noir hover:bg-gris'
+              }`}
+            >
+              {plan.cta}
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-sm text-gris-moyen mt-8">
+        Prix HT · Engagement mensuel · Résiliable à tout moment ·
+        <a href={`${base}/tarifs`} class="text-bleu hover:underline">Voir le comparatif complet</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="py-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-noir text-center mb-12">
+        Questions fréquentes
+      </h2>
+
+      <div class="space-y-4" x-data="{ open: null }">
+        {[
+          {
+            q: "La réforme m'oblige-t-elle vraiment dès septembre 2026 ?",
+            a: "Oui. La loi de finances 2024 rend obligatoire la facturation électronique B2B pour toutes les entreprises françaises assujetties à la TVA, quelle que soit leur taille. À partir du 1er septembre 2026, vous devez émettre et recevoir vos factures en format électronique normé.",
+          },
+          {
+            q: "Facturons est-il agréé par la DGFiP ?",
+            a: "Facturons s'appuie sur IOPOLE, une PDP (Plateforme de Dématérialisation Partenaire) officiellement agréée par la DGFiP. Vos factures transitent par un opérateur certifié, ce qui vous garantit la conformité légale.",
+          },
+          {
+            q: "Puis-je importer mes clients et produits existants ?",
+            a: "Oui. Le catalogue accepte l'import CSV pour les articles. Les clients peuvent être saisis manuellement ou repris depuis vos devis existants. L'import depuis votre ancien logiciel est prévu dans une prochaine version.",
+          },
+          {
+            q: "Est-ce que ça fonctionne sans connexion internet ?",
+            a: "Oui. La création de factures, devis et la consultation de votre historique sont 100% hors-ligne. La transmission IOPOLE et la synchronisation nécessitent une connexion internet.",
+          },
+          {
+            q: "Comment configurer mon compte IOPOLE ?",
+            a: "Créez un compte sur sandbox.iopole.fr, générez vos clés API (client_id + client_secret), et collez-les dans Paramètres → IOPOLE de l'app. Comptez 15 minutes. Notre tutoriel guidé vous accompagne étape par étape.",
+          },
+          {
+            q: "Puis-je annuler à tout moment ?",
+            a: "Oui, sans engagement ni frais de résiliation. Résiliation en 1 clic depuis l'app. Vos données restent accessibles en lecture pendant 30 jours après résiliation.",
+          },
+        ].map((item, i) => (
+          <details class="group bg-white border border-gris rounded-2xl overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none font-semibold text-noir hover:text-bleu transition-colors">
+              {item.q}
+              <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-gris-clair group-open:bg-bleu group-open:text-white transition-colors text-sm">
+                +
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-gris-fonce text-sm leading-relaxed">
+              {item.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA FINAL
+  ═══════════════════════════════════════════ -->
+  <section class="bg-gradient-to-br from-bleu to-bleu-dark text-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-5">
+        Prêt pour septembre 2026 ?
+      </h2>
+      <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto">
+        Plus de 3 000 artisans français utilisent déjà Facturons.
+        Rejoignez-les et soyez conforme dès aujourd'hui.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#tarifs"
+          class="bg-white text-bleu font-bold px-8 py-4 rounded-2xl text-lg hover:bg-bleu-light transition-colors"
+        >
+          Commencer gratuitement
+        </a>
+        <a
+          href={`${base}/comment-ca-marche`}
+          class="border-2 border-white/40 text-white font-bold px-8 py-4 rounded-2xl text-lg hover:border-white transition-colors"
+        >
+          Voir une démo
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

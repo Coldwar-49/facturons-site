@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Mentions légales — Facturons"
+  canonical="/mentions-legales"
+>
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto prose prose-sm text-gris-fonce">
+      <h1 class="text-3xl font-extrabold text-noir mb-8">Mentions légales</h1>
+
+      <h2 id="editeur" class="text-xl font-bold text-noir mt-8 mb-3">Éditeur</h2>
+      <p>
+        Facturons est édité par Fabrice Desmeulières, auto-entrepreneur.<br />
+        Email : <a href="mailto:contact@facturons.fr" class="text-bleu">contact@facturons.fr</a>
+      </p>
+
+      <h2 id="hebergement" class="text-xl font-bold text-noir mt-8 mb-3">Hébergement</h2>
+      <p>
+        Ce site est hébergé par <strong>Vercel Inc.</strong>, 340 Pine Street, Suite 701, San Francisco, CA 94104, USA.<br />
+        L'application mobile est distribuée via Google Play Store et Apple App Store.
+      </p>
+
+      <h2 id="propriete" class="text-xl font-bold text-noir mt-8 mb-3">Propriété intellectuelle</h2>
+      <p>
+        L'ensemble des contenus de ce site (textes, images, code) est la propriété exclusive de l'éditeur.
+        Toute reproduction sans autorisation est interdite.
+      </p>
+
+      <h2 id="confidentialite" class="text-xl font-bold text-noir mt-8 mb-3">Politique de confidentialité</h2>
+      <p>
+        Les données saisies dans l'application (clients, factures, SIRET) sont stockées localement sur
+        votre appareil (SQLite) et sur les serveurs sécurisés d'IOPOLE pour les factures transmises.
+        Aucune donnée n'est vendue à des tiers.
+      </p>
+      <p>
+        Les informations de paiement sont traitées exclusivement par <strong>Stripe</strong> (PCI-DSS Level 1).
+        Facturons ne stocke aucun numéro de carte.
+      </p>
+      <p>
+        Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos
+        données. Pour l'exercer : <a href="mailto:contact@facturons.fr" class="text-bleu">contact@facturons.fr</a>
+      </p>
+
+      <h2 id="cgv" class="text-xl font-bold text-noir mt-8 mb-3">Conditions générales de vente</h2>
+      <p>
+        Les abonnements sont sans engagement, résiliables à tout moment depuis l'app.
+        La facturation est mensuelle, en début de période. Les prix sont exprimés HT.
+        TVA française applicable pour les résidents en France.
+        Satisfait ou remboursé 30 jours pour tout nouvel abonnement payant.
+      </p>
+
+      <p class="text-xs text-gris-moyen mt-12">Dernière mise à jour : mai 2026</p>
+    </div>
+  </section>
+</Layout>

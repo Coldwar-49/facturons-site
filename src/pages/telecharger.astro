@@ -1,0 +1,272 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const apkUrl     = 'https://github.com/Coldwar-49/facturons/releases/download/v1.2.0/Fakturons-Android-v1.2.0.apk';
+const windowsUrl = 'https://github.com/Coldwar-49/facturons/releases/download/v1.2.0/Fakturons-Windows-v1.2.0.zip';
+const version    = '1.2.0';
+---
+
+<Layout
+  title="Télécharger Facturons — Android & Windows"
+  description="Téléchargez Facturons pour Android ou Windows. Application de facturation électronique conforme Factur-X incluse dans votre abonnement."
+  canonical="/telecharger"
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="bg-gradient-to-br from-bleu-light via-white to-white pt-16 pb-12 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-vert/10 text-vert font-semibold text-sm px-4 py-1.5 rounded-full mb-6">
+        <span class="w-2 h-2 bg-vert rounded-full"></span>
+        Version {version} disponible
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-noir leading-tight mb-4">
+        Téléchargez <span class="text-bleu">Facturons</span>
+      </h1>
+      <p class="text-lg text-gris-fonce max-w-xl mx-auto">
+        Vos applications Android et Windows sont incluses dans votre abonnement. Installez-les en quelques secondes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CARTES DE TÉLÉCHARGEMENT
+  ═══════════════════════════════════════════ -->
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <div class="grid sm:grid-cols-2 gap-6">
+
+      <!-- Android -->
+      <div class="bg-white border-2 border-gris rounded-3xl p-8 flex flex-col gap-6 hover:border-bleu hover:shadow-lg hover:shadow-bleu/10 transition-all">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-bleu-light rounded-2xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-bleu" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3.18 23.76c.3.17.64.2.96.1l11.5-11.5-2.28-2.28L3.18 23.76zM20.48 10.3l-2.58-1.49-2.57 2.57 2.57 2.57 2.6-1.5c.74-.43.74-1.72-.02-2.15zM2.04 1.13C1.76 1.43 1.6 1.9 1.6 2.5v19c0 .6.16 1.07.44 1.37l.07.07 10.64-10.63v-.24L2.11 1.06l-.07.07zM14.45 8.65L3.18.24c-.32-.1-.66-.07-.96.1l10.18 10.17 2.05-1.86z"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-noir">Android</h2>
+            <p class="text-sm text-gris-moyen">APK universel · Android 5.0+</p>
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <ul class="space-y-2 text-sm text-gris-fonce">
+            <li class="flex items-center gap-2">
+              <span class="w-5 h-5 bg-vert/10 text-vert rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+              Fonctionne sur tous les Android 5+
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-5 h-5 bg-vert/10 text-vert rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+              Installation directe (APK)
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-5 h-5 bg-vert/10 text-vert rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+              Mises à jour via cette page
+            </li>
+          </ul>
+        </div>
+
+        <a
+          href={apkUrl}
+          class="flex items-center justify-center gap-3 bg-bleu text-white px-6 py-4 rounded-2xl font-bold text-base hover:bg-bleu-dark transition-colors shadow-md shadow-bleu/20 group"
+        >
+          <svg class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+          </svg>
+          Télécharger l'APK
+          <span class="text-xs font-normal opacity-75">85 Mo</span>
+        </a>
+
+        <!-- Instructions Android -->
+        <details class="group">
+          <summary class="text-sm font-semibold text-bleu cursor-pointer list-none flex items-center gap-1 hover:underline">
+            <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+            </svg>
+            Comment installer sur Android ?
+          </summary>
+          <ol class="mt-3 space-y-2 text-sm text-gris-fonce list-decimal list-inside">
+            <li>Téléchargez l'APK sur votre téléphone</li>
+            <li>Allez dans <strong>Paramètres → Sécurité → Sources inconnues</strong> et autorisez votre navigateur</li>
+            <li>Ouvrez le fichier APK téléchargé et appuyez sur <strong>Installer</strong></li>
+            <li>Lancez <strong>Facturons</strong> depuis votre écran d'accueil</li>
+          </ol>
+          <p class="mt-2 text-xs text-gris-moyen">L'avertissement Android est normal pour les APK hors Play Store. L'application est sûre.</p>
+        </details>
+      </div>
+
+      <!-- Windows -->
+      <div class="bg-white border-2 border-gris rounded-3xl p-8 flex flex-col gap-6 hover:border-bleu hover:shadow-lg hover:shadow-bleu/10 transition-all">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 bg-bleu-light rounded-2xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-bleu" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-noir">Windows</h2>
+            <p class="text-sm text-gris-moyen">64-bit · Windows 10 minimum</p>
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <ul class="space-y-2 text-sm text-gris-fonce">
+            <li class="flex items-center gap-2">
+              <span class="w-5 h-5 bg-vert/10 text-vert rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+              Application native Windows
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-5 h-5 bg-vert/10 text-vert rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+              Pas d'installation — dézipper et lancer
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-5 h-5 bg-vert/10 text-vert rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+              Mises à jour via cette page
+            </li>
+          </ul>
+        </div>
+
+        <a
+          href={windowsUrl}
+          class="flex items-center justify-center gap-3 bg-bleu text-white px-6 py-4 rounded-2xl font-bold text-base hover:bg-bleu-dark transition-colors shadow-md shadow-bleu/20 group"
+        >
+          <svg class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+          </svg>
+          Télécharger pour Windows
+          <span class="text-xs font-normal opacity-75">26 Mo</span>
+        </a>
+
+        <!-- Instructions Windows -->
+        <details class="group">
+          <summary class="text-sm font-semibold text-bleu cursor-pointer list-none flex items-center gap-1 hover:underline">
+            <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+            </svg>
+            Comment installer sur Windows ?
+          </summary>
+          <ol class="mt-3 space-y-2 text-sm text-gris-fonce list-decimal list-inside">
+            <li>Téléchargez et dézippez le fichier</li>
+            <li>Ouvrez le dossier extrait et double-cliquez sur <strong>facturons.exe</strong></li>
+            <li>Si Windows SmartScreen s'affiche, cliquez <strong>Informations complémentaires → Exécuter quand même</strong></li>
+          </ol>
+          <p class="mt-2 text-xs text-gris-moyen">L'avertissement SmartScreen est normal pour les applications sans signature Microsoft. Vous pouvez l'ignorer en toute sécurité.</p>
+        </details>
+      </div>
+    </div>
+
+    <!-- iOS / macOS à venir -->
+    <div class="mt-6 bg-gris-clair border border-gris rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+      <div class="flex gap-3 flex-shrink-0">
+        <span class="inline-flex items-center gap-1.5 bg-white border border-gris rounded-xl px-3 py-2 text-sm font-medium text-gris-moyen">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.42c1.39.07 2.35.74 3.17.78 1.2-.24 2.35-.93 3.64-.84 1.54.12 2.7.7 3.44 1.8-3.14 1.87-2.39 6.01.43 7.16-.57 1.39-1.3 2.77-2.68 3.96zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          iOS
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-white border border-gris rounded-xl px-3 py-2 text-sm font-medium text-gris-moyen">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          macOS
+        </span>
+      </div>
+      <div>
+        <p class="font-semibold text-noir text-sm">iOS &amp; macOS arrivent en Q4 2026</p>
+        <p class="text-xs text-gris-moyen mt-0.5">
+          Abonnés actuels : votre tarif sera maintenu à vie lors du lancement.
+          <a href={`${base}/contact`} class="text-bleu underline ml-1">Être notifié →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════════ -->
+  <section class="bg-gris-clair py-16 px-4">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl font-extrabold text-noir mb-8 text-center">Questions fréquentes</h2>
+      <div class="space-y-4">
+
+        <details class="bg-white rounded-2xl border border-gris group">
+          <summary class="px-6 py-4 font-semibold text-noir cursor-pointer list-none flex justify-between items-center hover:text-bleu transition-colors">
+            L'application est-elle gratuite ?
+            <svg class="w-5 h-5 text-gris-moyen transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </summary>
+          <p class="px-6 pb-5 text-sm text-gris-fonce">
+            Le plan Gratuit vous permet de créer jusqu'à 3 factures par mois et 2 clients, sans engagement. Les applications Android et Windows sont incluses dans les plans payants (Starter et Pro).
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gris group">
+          <summary class="px-6 py-4 font-semibold text-noir cursor-pointer list-none flex justify-between items-center hover:text-bleu transition-colors">
+            Mon téléphone dit que l'APK est dangereux. Que faire ?
+            <svg class="w-5 h-5 text-gris-moyen transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </summary>
+          <p class="px-6 pb-5 text-sm text-gris-fonce">
+            Cet avertissement apparaît pour toutes les applications installées en dehors du Play Store (APK direct). Ce n'est pas un signe de danger. Autorisez l'installation depuis votre navigateur dans <strong>Paramètres → Sécurité → Sources inconnues</strong>, puis réessayez.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gris group">
+          <summary class="px-6 py-4 font-semibold text-noir cursor-pointer list-none flex justify-between items-center hover:text-bleu transition-colors">
+            Windows Defender bloque l'application. Comment contourner ?
+            <svg class="w-5 h-5 text-gris-moyen transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </summary>
+          <p class="px-6 pb-5 text-sm text-gris-fonce">
+            Si SmartScreen apparaît, cliquez sur <strong>Informations complémentaires</strong> puis <strong>Exécuter quand même</strong>. Ce message s'affiche car l'application n'est pas encore signée avec un certificat Microsoft (prévu pour la v2). Elle est parfaitement sûre.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gris group">
+          <summary class="px-6 py-4 font-semibold text-noir cursor-pointer list-none flex justify-between items-center hover:text-bleu transition-colors">
+            Comment être prévenu des mises à jour ?
+            <svg class="w-5 h-5 text-gris-moyen transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </summary>
+          <p class="px-6 pb-5 text-sm text-gris-fonce">
+            Cette page est mise à jour à chaque nouvelle version. Vous pouvez également <a href="https://github.com/Coldwar-49/facturons/releases" class="text-bleu underline" target="_blank" rel="noopener">suivre les releases sur GitHub</a> ou nous contacter pour être notifié par email.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl border border-gris group">
+          <summary class="px-6 py-4 font-semibold text-noir cursor-pointer list-none flex justify-between items-center hover:text-bleu transition-colors">
+            Mes données sont-elles synchronisées entre Android et Windows ?
+            <svg class="w-5 h-5 text-gris-moyen transition-transform group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </summary>
+          <p class="px-6 pb-5 text-sm text-gris-fonce">
+            Actuellement, les données sont stockées localement sur chaque appareil. La synchronisation cloud multi-appareils est prévue pour la v2. Pour l'instant, utilisez l'export PDF et le partage pour transférer vos factures si nécessaire.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA FINAL
+  ═══════════════════════════════════════════ -->
+  <section class="py-16 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl font-extrabold text-noir mb-3">Pas encore abonné ?</h2>
+      <p class="text-gris-fonce mb-8">
+        Commencez gratuitement — 3 factures par mois, sans carte bancaire. Passez à Starter ou Pro quand vous êtes prêt.
+      </p>
+      <a
+        href={`${base}/tarifs`}
+        class="inline-flex items-center gap-2 bg-bleu text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-bleu-dark transition-colors shadow-lg shadow-bleu/25"
+      >
+        Voir les forfaits →
+      </a>
+    </div>
+  </section>
+
+</Layout>

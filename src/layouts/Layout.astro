@@ -1,0 +1,122 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+}
+
+const {
+  title,
+  description = "Facturons — Application de facturation électronique conforme pour les artisans et auto-entrepreneurs français. Génère des factures Factur-X et les transmet via IOPOLE.",
+  canonical,
+} = Astro.props;
+
+const siteUrl = 'https://facturons.fr';
+const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={fullCanonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullCanonical} />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+  </head>
+  <body class="bg-white text-noir font-sans antialiased">
+    <!-- Bandeau urgence réforme -->
+    <div class="bg-bleu text-white text-center text-sm py-2 px-4">
+      ⚡ À partir du <strong>1er septembre 2026</strong>, la facturation électronique B2B devient obligatoire.
+      <a href={`${base}/comment-ca-marche`} class="underline ml-1 font-semibold">En savoir plus →</a>
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gris shadow-sm">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href={`${base}/`} class="flex items-center gap-2">
+          <span class="text-2xl font-extrabold text-bleu">Facturons</span>
+          <span class="hidden sm:block text-xs bg-bleu-light text-bleu font-semibold px-2 py-0.5 rounded-full">
+            Conforme 2026
+          </span>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gris-fonce">
+          <a href={`${base}/comment-ca-marche`} class="hover:text-bleu transition-colors">Comment ça marche</a>
+          <a href={`${base}/iopole`} class="hover:text-bleu transition-colors">IOPOLE</a>
+          <a href={`${base}/tarifs`} class="hover:text-bleu transition-colors">Tarifs</a>
+          <a href={`${base}/telecharger`} class="hover:text-bleu transition-colors">Télécharger</a>
+        </div>
+        <a
+          href={`${base}/telecharger`}
+          class="bg-bleu text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-bleu-dark transition-colors"
+        >
+          Télécharger
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-noir text-white mt-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+          <div class="col-span-2 md:col-span-1">
+            <span class="text-2xl font-extrabold text-bleu">Facturons</span>
+            <p class="mt-3 text-sm text-gris-moyen leading-relaxed">
+              La facturation électronique conforme pour les pros français. Certifié Factur-X EN 16931.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-3">Produit</h3>
+            <ul class="space-y-2 text-sm text-gris-moyen">
+              <li><a href={`${base}/comment-ca-marche`} class="hover:text-white transition-colors">Comment ça marche</a></li>
+              <li><a href={`${base}/iopole`} class="hover:text-white transition-colors">Tutoriel IOPOLE</a></li>
+              <li><a href={`${base}/tarifs`} class="hover:text-white transition-colors">Tarifs</a></li>
+              <li><a href={`${base}/telecharger`} class="hover:text-white transition-colors">Télécharger</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-3">Ressources</h3>
+            <ul class="space-y-2 text-sm text-gris-moyen">
+              <li><a href={`${base}/blog`} class="hover:text-white transition-colors">Blog</a></li>
+              <li><a href={`${base}/contact`} class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-3">Légal</h3>
+            <ul class="space-y-2 text-sm text-gris-moyen">
+              <li><a href={`${base}/mentions-legales`} class="hover:text-white transition-colors">Mentions légales</a></li>
+              <li><a href={`${base}/mentions-legales#cgv`} class="hover:text-white transition-colors">CGV</a></li>
+              <li><a href={`${base}/mentions-legales#confidentialite`} class="hover:text-white transition-colors">Confidentialité</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-gris-moyen">
+          <p>© 2026 Facturons. Tous droits réservés.</p>
+          <p>Conforme <strong class="text-white">Factur-X EN 16931</strong> · PDP partenaire <strong class="text-white">IOPOLE</strong></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

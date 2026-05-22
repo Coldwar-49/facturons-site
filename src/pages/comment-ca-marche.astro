@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+  title="Comment ça marche — Facturons"
+  description="Guide complet : créer une facture électronique Factur-X, la transmettre via IOPOLE et suivre son statut en temps réel."
+  canonical="/comment-ca-marche"
+>
+  <section class="bg-gradient-to-br from-bleu-light to-white py-16 px-4 text-center">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-noir mb-4">Comment ça marche</h1>
+    <p class="text-lg text-gris-fonce max-w-xl mx-auto">
+      De la création de la facture à la confirmation de réception — tout en moins de 2 minutes.
+    </p>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto space-y-16">
+      {[
+        {
+          emoji: '👤',
+          titre: 'Configurez votre profil une seule fois',
+          desc: `Renseignez vos informations entreprise : SIRET, raison sociale, adresse, régime TVA.
+Ces données alimentent automatiquement toutes vos factures et devis.
+Ajoutez votre logo pour un rendu professionnel.`,
+        },
+        {
+          emoji: '🧾',
+          titre: 'Créez votre facture en 2 minutes',
+          desc: `Sélectionnez un client existant ou créez-en un nouveau.
+Ajoutez vos lignes depuis le catalogue (articles pré-configurés avec prix et TVA).
+La numérotation séquentielle est automatique (FA-2026-001, FA-2026-002…).
+Prévisualisez le PDF avant d'envoyer.`,
+        },
+        {
+          emoji: '📄',
+          titre: 'Facturons génère le PDF/A-3b + XML',
+          desc: `Le PDF est généré au format PDF/A-3b (archivage long terme).
+Le XML Factur-X EN 16931 est automatiquement embarqué dans le PDF.
+Ce format est exigé par la réforme française et validé par les standards européens.`,
+        },
+        {
+          emoji: '🏛️',
+          titre: 'Transmission automatique via IOPOLE',
+          desc: `En appuyant sur "Envoyer via IOPOLE", Facturons :
+1. Authentifie votre compte IOPOLE
+2. Uploade le PDF/A-3b Factur-X
+3. Reçoit un ID de suivi
+
+Votre client reçoit la facture sur sa propre plateforme de facturation.`,
+        },
+        {
+          emoji: '📊',
+          titre: 'Suivez les statuts en temps réel',
+          desc: `Dans l'onglet Suivi, consultez le cycle de vie de chaque facture :
+→ Déposée : reçue par IOPOLE
+→ Validée : format vérifié
+→ Reçue : votre client a été notifié
+→ Mise à disposition : accessible à votre client
+→ Payée : encaissement confirmé`,
+        },
+      ].map((step) => (
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-14 h-14 bg-bleu-light rounded-2xl flex items-center justify-center text-3xl">
+            {step.emoji}
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-noir mb-3">{step.titre}</h2>
+            <p class="text-gris-fonce text-sm leading-relaxed whitespace-pre-line">{step.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-bleu text-white py-14 px-4 text-center">
+    <h2 class="text-2xl font-extrabold mb-4">Prêt à essayer ?</h2>
+    <p class="text-white/80 mb-8">Gratuit pour commencer, sans carte bancaire.</p>
+    <a href={`${base}/#tarifs`} class="bg-white text-bleu font-bold px-8 py-3 rounded-xl hover:bg-bleu-light transition-colors inline-block">
+      Voir les tarifs
+    </a>
+  </section>
+</Layout>

@@ -1,0 +1,214 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Tarifs Facturons — Gratuit, Starter 9€, Pro 19€"
+  description="Grille tarifaire complète de Facturons. Plan gratuit, Starter à 9€/mois, Pro à 19€/mois. Résiliable à tout moment."
+  canonical="/tarifs"
+>
+  <!-- Header -->
+  <section class="bg-gradient-to-br from-bleu-light to-white py-16 px-4 text-center">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-noir mb-4">
+      Tarifs simples et transparents
+    </h1>
+    <p class="text-lg text-gris-fonce max-w-xl mx-auto">
+      Pas de frais cachés. Résiliable à tout moment. Essai 30 jours gratuit sur les plans payants.
+    </p>
+  </section>
+
+  <!-- Grille tarifaire -->
+  <section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="inline-flex items-center gap-2 mb-8 bg-vert/10 text-vert font-semibold text-sm px-5 py-2 rounded-full">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        Application Android + Windows incluse dans tous les forfaits payants
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr>
+              <th class="text-left pb-6 pr-6 text-gris-moyen font-normal w-1/4">Fonctionnalité</th>
+              {[
+                { name: 'Gratuit', price: '0 €', sub: 'pour toujours', highlight: false, badge: null },
+                { name: 'Starter', price: '9 €', sub: '/mois HT', highlight: true, badge: 'Prix de lancement' },
+                { name: 'Pro', price: '19 €', sub: '/mois HT', highlight: false, badge: 'Prix de lancement' },
+              ].map((plan) => (
+                <th class={`text-center pb-6 px-4 ${plan.highlight ? 'text-bleu' : 'text-noir'}`}>
+                  {plan.badge && (
+                    <div class="inline-block bg-vert/10 text-vert text-xs font-bold px-3 py-1 rounded-full mb-2">
+                      {plan.badge}
+                    </div>
+                  )}
+                  <div class="font-extrabold text-xl">{plan.name}</div>
+                  <div class="font-extrabold text-3xl mt-1">{plan.price}</div>
+                  <div class="text-xs text-gris-moyen font-normal">{plan.sub}</div>
+                  <a
+                    href="#"
+                    class={`mt-3 inline-block px-5 py-2 rounded-xl text-xs font-bold transition-colors ${
+                      plan.highlight
+                        ? 'bg-bleu text-white hover:bg-bleu-dark'
+                        : 'bg-gris text-noir hover:bg-gris-moyen/30'
+                    }`}
+                  >
+                    {plan.name === 'Gratuit' ? 'Démarrer' : 'Essayer 30j'}
+                  </a>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gris">
+            {[
+              ['App Android + Windows', '—', '✓', '✓'],
+              ['Factures par mois', '3', '50', 'Illimité'],
+              ['Clients', '5', 'Illimité', 'Illimité'],
+              ['Devis', '✓', '✓', '✓'],
+              ['PDF standard', '✓', '✓', '✓'],
+              ['Signature électronique', '—', '✓', '✓'],
+              ['Catalogue articles', '—', '✓', '✓'],
+              ['Statistiques CA', '—', '✓', '✓'],
+              ['Factur-X EN 16931', '—', '✓', '✓'],
+              ['Transmission IOPOLE', '—', '✓', '✓'],
+              ['Suivi statuts IOPOLE', '—', '✓', '✓'],
+              ['Avoirs (notes de crédit)', '—', '—', '✓'],
+              ['FEC DGFiP', '—', '—', '✓'],
+              ['Brouillon TVA (CA3)', '—', '—', '✓'],
+              ['Dépenses & charges', '—', '—', '✓'],
+              ['Relances automatiques', '—', '—', '✓'],
+              ['Justificatifs photo', '—', '—', '✓'],
+              ['Export CSV dépenses', '—', '—', '✓'],
+            ].map(([feat, free, starter, pro]) => (
+              <tr class="hover:bg-gris-clair/50 transition-colors">
+                <td class="py-3 pr-6 text-gris-fonce">{feat}</td>
+                {[free, starter, pro].map((val, i) => (
+                  <td class={`py-3 px-4 text-center font-medium ${
+                    val === '✓' ? 'text-vert' : val === '—' ? 'text-gris' : 'text-noir'
+                  } ${i === 1 ? 'bg-bleu-light/30' : ''}`}>
+                    {val}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mac & iOS — Bientôt disponible -->
+  <section class="py-12 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-gradient-to-br from-gris-clair to-white border border-gris rounded-3xl p-8">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-bleu/10 text-bleu text-xs font-bold px-3 py-1 rounded-full mb-3">
+              <span class="w-2 h-2 bg-bleu rounded-full animate-pulse"></span>
+              Bientôt disponible — Q4 2026
+            </div>
+            <h2 class="text-2xl font-extrabold text-noir mb-2">Mac & iOS arrivent</h2>
+            <p class="text-gris-fonce text-sm max-w-lg">
+              Les versions macOS et iPhone sont en cours de développement.
+              Au lancement, les tarifs seront légèrement revus pour refléter la couverture 4 plateformes.
+              Les abonnés actuels conservent leur prix de lancement à vie.
+            </p>
+          </div>
+          <div class="flex-shrink-0 flex gap-4">
+            <div class="text-center bg-white border border-gris rounded-2xl px-6 py-4">
+              <div class="text-xs text-gris-moyen mb-1">Starter</div>
+              <div class="text-2xl font-extrabold text-noir">12 €</div>
+              <div class="text-xs text-gris-moyen">/mois HT</div>
+            </div>
+            <div class="text-center bg-white border border-gris rounded-2xl px-6 py-4">
+              <div class="text-xs text-gris-moyen mb-1">Pro</div>
+              <div class="text-2xl font-extrabold text-noir">25 €</div>
+              <div class="text-xs text-gris-moyen">/mois HT</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-6 border-t border-gris flex flex-col sm:flex-row gap-4 items-center justify-between">
+          <p class="text-sm font-semibold text-vert">
+            ✓ Abonnez-vous maintenant et gardez votre prix de lancement à vie, même après la hausse.
+          </p>
+          <a href="#" class="inline-block bg-bleu text-white font-bold px-6 py-2 rounded-xl text-sm hover:bg-bleu-dark transition-colors">
+            Bloquer mon prix →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code source pour développeurs -->
+  <section class="py-12 px-4 border-t border-gris">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-noir rounded-3xl p-8 flex flex-col sm:flex-row items-center gap-8">
+        <div class="flex-1">
+          <div class="inline-block bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
+            Pour les développeurs
+          </div>
+          <h2 class="text-xl font-extrabold text-white mb-2">Achetez le code source Flutter</h2>
+          <p class="text-white/70 text-sm leading-relaxed">
+            Code source complet · White-label · Factur-X + IOPOLE inclus · Android + Windows
+          </p>
+          <p class="text-white/50 text-xs mt-1">Dev €149 · Business €499 · Enterprise €1 499 — paiement unique</p>
+        </div>
+        <div class="flex-shrink-0">
+          <a
+            href="https://devisfabrice.gumroad.com/l/gdogxd"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-white text-noir font-bold px-6 py-3 rounded-xl hover:bg-gris-clair transition-colors"
+          >
+            Voir sur Gumroad →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Garantie -->
+  <section class="bg-gris-clair py-14 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="text-5xl mb-4">🛡️</div>
+      <h2 class="text-2xl font-extrabold text-noir mb-3">Satisfait ou remboursé 30 jours</h2>
+      <p class="text-gris-fonce">
+        Si Facturons ne vous convient pas, nous vous remboursons intégralement dans les 30 jours —
+        sans question, sans justification.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Prix -->
+  <section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-extrabold text-noir mb-8 text-center">Questions sur les tarifs</h2>
+      <div class="space-y-4">
+        {[
+          {
+            q: "Le prix inclut-il la TVA ?",
+            a: "Non. Les prix affichés sont HT. TVA française à 20% s'applique pour les clients résidents en France.",
+          },
+          {
+            q: "Puis-je changer de plan à tout moment ?",
+            a: "Oui. Upgrade ou downgrade en 1 clic depuis l'app. La facturation est au prorata du mois en cours.",
+          },
+          {
+            q: "Y a-t-il une réduction pour l'abonnement annuel ?",
+            a: "Oui, -20% sur les plans payants avec un engagement annuel. Contactez-nous pour en bénéficier.",
+          },
+          {
+            q: "Que se passe-t-il si je dépasse ma limite de factures ?",
+            a: "Un message vous invite à upgrader. Vos factures en cours ne sont pas bloquées, mais vous ne pouvez pas en créer de nouvelles tant que vous n'avez pas changé de plan.",
+          },
+        ].map((item) => (
+          <details class="group bg-white border border-gris rounded-2xl overflow-hidden">
+            <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer list-none font-semibold text-noir hover:text-bleu transition-colors">
+              {item.q}
+              <span class="flex-shrink-0 text-xl group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <div class="px-5 pb-5 text-gris-fonce text-sm leading-relaxed">{item.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
