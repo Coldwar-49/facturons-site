@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coldwar-49.github.io/facturons-site/sitemap.xml
