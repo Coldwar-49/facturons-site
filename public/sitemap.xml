@@ -2,36 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://coldwar-49.github.io/facturons-site/</loc>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://coldwar-49.github.io/facturons-site/comment-ca-marche/</loc>
+    <loc>https://coldwar-49.github.io/facturons-site/comment-ca-marche</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coldwar-49.github.io/facturons-site/telecharger/</loc>
+    <loc>https://coldwar-49.github.io/facturons-site/telecharger</loc>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://coldwar-49.github.io/facturons-site/tarifs/</loc>
+    <loc>https://coldwar-49.github.io/facturons-site/tarifs</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://coldwar-49.github.io/facturons-site/iopole/</loc>
+    <loc>https://coldwar-49.github.io/facturons-site/iopole</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://coldwar-49.github.io/facturons-site/contact/</loc>
+    <loc>https://coldwar-49.github.io/facturons-site/contact</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://coldwar-49.github.io/facturons-site/mentions-legales/</loc>
+    <loc>https://coldwar-49.github.io/facturons-site/mentions-legales</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

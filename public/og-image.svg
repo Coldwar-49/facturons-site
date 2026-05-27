@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EBF3FF"/>
+      <stop offset="100%" style="stop-color:#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fond -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Barre bleue gauche -->
+  <rect x="0" y="0" width="8" height="630" fill="#1E6BFF"/>
+
+  <!-- Badge conformité -->
+  <rect x="80" y="80" width="260" height="36" rx="18" fill="#00C896" fill-opacity="0.15"/>
+  <text x="210" y="103" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#00C896" text-anchor="middle">✓ Conforme réforme 2026</text>
+
+  <!-- Titre principal -->
+  <text x="80" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="#1A202C">Facturons</text>
+
+  <!-- Sous-titre -->
+  <text x="80" y="270" font-family="Arial, sans-serif" font-size="28" fill="#4A5568">Facturation électronique conforme</text>
+  <text x="80" y="310" font-family="Arial, sans-serif" font-size="28" fill="#4A5568">pour les pros français</text>
+
+  <!-- Description -->
+  <text x="80" y="380" font-family="Arial, sans-serif" font-size="20" fill="#9BA5B0">Factur-X · IOPOLE · Android &amp; Windows · Gratuit</text>
+
+  <!-- Séparateur -->
+  <line x1="80" y1="420" x2="560" y2="420" stroke="#E8ECF0" stroke-width="2"/>
+
+  <!-- Prix -->
+  <text x="80" y="470" font-family="Arial, sans-serif" font-size="18" fill="#4A5568">Gratuit</text>
+  <text x="200" y="470" font-family="Arial, sans-serif" font-size="18" fill="#9BA5B0">·</text>
+  <text x="225" y="470" font-family="Arial, sans-serif" font-size="18" fill="#4A5568">Starter 9€/mois</text>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="18" fill="#9BA5B0">·</text>
+  <text x="425" y="470" font-family="Arial, sans-serif" font-size="18" fill="#4A5568">Pro 19€/mois</text>
+
+  <!-- URL -->
+  <text x="80" y="550" font-family="Arial, sans-serif" font-size="16" fill="#1E6BFF">coldwar-49.github.io/facturons-site</text>
+
+  <!-- Illustration droite — écran stylisé -->
+  <rect x="780" y="100" width="340" height="430" rx="20" fill="#1E6BFF" fill-opacity="0.08" stroke="#1E6BFF" stroke-opacity="0.2" stroke-width="2"/>
+  <rect x="800" y="130" width="300" height="40" rx="8" fill="#1E6BFF" fill-opacity="0.15"/>
+  <text x="950" y="156" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1E6BFF" text-anchor="middle">Facture n° 2026-042</text>
+  <rect x="800" y="185" width="140" height="12" rx="6" fill="#E8ECF0"/>
+  <rect x="800" y="207" width="200" height="12" rx="6" fill="#E8ECF0"/>
+  <rect x="800" y="229" width="160" height="12" rx="6" fill="#E8ECF0"/>
+  <rect x="800" y="265" width="300" height="1" fill="#E8ECF0"/>
+  <rect x="800" y="280" width="240" height="12" rx="6" fill="#E8ECF0"/>
+  <rect x="800" y="302" width="180" height="12" rx="6" fill="#E8ECF0"/>
+  <rect x="800" y="324" width="220" height="12" rx="6" fill="#E8ECF0"/>
+  <rect x="800" y="360" width="300" height="1" fill="#E8ECF0"/>
+  <rect x="900" y="380" width="200" height="36" rx="8" fill="#1E6BFF"/>
+  <text x="1000" y="403" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">Envoyer via IOPOLE</text>
+  <!-- Badge statut -->
+  <rect x="800" y="440" width="120" height="28" rx="14" fill="#00C896" fill-opacity="0.15"/>
+  <text x="860" y="458" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#00C896" text-anchor="middle">✓ Transmise</text>
+</svg>

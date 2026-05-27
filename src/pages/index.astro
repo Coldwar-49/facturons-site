@@ -5,8 +5,63 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <Layout
   title="Facturons — Facturation électronique conforme pour les artisans français"
+  description="Créez des factures électroniques Factur-X conformes à la réforme 2026 en moins de 2 minutes. Application gratuite pour auto-entrepreneurs et artisans. Transmission automatique via IOPOLE."
   canonical="/"
+  keywords="facturation électronique, Factur-X, auto-entrepreneur, artisan, réforme 2026, IOPOLE, PDP, facture conforme, logiciel facturation gratuit"
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Facturons",
+    "operatingSystem": "Android, Windows",
+    "applicationCategory": "BusinessApplication",
+    "offers": [
+      { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Gratuit" },
+      { "@type": "Offer", "price": "9", "priceCurrency": "EUR", "name": "Starter" },
+      { "@type": "Offer", "price": "19", "priceCurrency": "EUR", "name": "Pro" }
+    ],
+    "description": "Application de facturation électronique conforme Factur-X EN 16931 pour artisans et auto-entrepreneurs français. Transmission automatique via IOPOLE, conforme réforme septembre 2026.",
+    "url": "https://coldwar-49.github.io/facturons-site/",
+    "downloadUrl": "https://coldwar-49.github.io/facturons-site/telecharger",
+    "softwareVersion": "1.3.0",
+    "screenshot": "https://coldwar-49.github.io/facturons-site/og-image.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Facturons",
+      "url": "https://coldwar-49.github.io/facturons-site/"
+    }
+  })} />
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "La facturation électronique est-elle obligatoire en 2026 ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. À partir du 1er septembre 2026, toutes les entreprises françaises assujetties à la TVA doivent émettre leurs factures B2B via une Plateforme de Dématérialisation Partenaire (PDP) agréée par la DGFiP."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce que Factur-X ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Factur-X est le standard franco-allemand de facture électronique hybride (PDF + XML). Le profil EN 16931 est le minimum légal pour la facturation B2B TVA en France à partir de 2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Facturons est-il gratuit ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, Facturons propose un plan gratuit permanent avec création de factures et devis illimités. Les plans payants (Starter 9€/mois, Pro 19€/mois) débloquent la transmission IOPOLE et les fonctionnalités avancées."
+        }
+      }
+    ]
+  })} />
+
   <!-- ═══════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════ -->
